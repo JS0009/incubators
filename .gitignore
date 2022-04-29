@@ -1,3 +1,8 @@
+# Compiled
+/docs/index.html
+/src/pug_modules/svg.pug
+/src/pug_modules/settings.pug
+
 # Logs
 logs
 *.log
