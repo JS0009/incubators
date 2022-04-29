@@ -56,7 +56,7 @@
     ],
 
     "withBootstrap":          true,
-    "withSvelte":             true,
+    "withSvelte":             false,
     "withHashRouting":        true,
     "withHMFLayout":          true,
     "withComfortableReading": true,

@@ -11,6 +11,10 @@ html(lang="ru")
 
         include headers/styles
 
+        if withSvelte
+            link(rel='stylesheet' href='build/bundle.css')
+            script(defer src='build/bundle.js')
+
         title= title
 
         body
@@ -23,3 +27,8 @@ html(lang="ru")
 
             footer
                 include footers/simple-copyright
+
+        if !withSvelte
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" crossorigin="anonymous" referrerpolicy="no-referrer")
+            include script
+

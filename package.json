@@ -4,10 +4,11 @@
   "description": "Создание статических страниц с помощью технологий bootstrap, svelte, pug.",
   "main": "src/index.js",
   "scripts": {
-    "clear": "rm -rf docs/index.html docs/build src/pug_modules/svg.pug src/pug_modules/settings.pug",
+    "clear": "rm -rf docs/index.html docs/build src/pug_modules/svg.pug src/pug_modules/settings.pug src/pug_modules/script.pug",
+    "pug-javascript": "node scripts/pug-javascript.js",
     "pug-svg-sprite": "node scripts/pug-svg-sprite.js",
-    "pug-settings": "node scripts/pug-settings.js",
-    "index.html": "npm run pug-svg-sprite && npm run pug-settings && node node_modules/pug-cli -o docs src/pug_modules/index.pug"
+    "pug-settings":   "node scripts/pug-settings.js",
+    "index.html": "npm run clear && npm run pug-javascript && npm run pug-svg-sprite && npm run pug-settings && node node_modules/pug-cli -o docs src/pug_modules/index.pug"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,8 @@
     "pug-cli": "^1.0.0-alpha6"
   },
   "dependencies": {
-    "@yababay67/hash-router": "^0.0.7",
+    "@yababay67/hash-router": "^0.1.0",
     "bootstrap-icons": "^1.8.1"
   }
 }
+
