@@ -1,5 +1,6 @@
 # Compiled
 /docs/index.html
+/docs/build/
 /src/pug_modules/svg.pug
 /src/pug_modules/settings.pug
 
