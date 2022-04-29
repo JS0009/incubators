@@ -1,0 +1,34 @@
+{
+  "name": "svelte-bootstrap-pug",
+  "version": "2.0.0",
+  "description": "Создание статических страниц с помощью технологий bootstrap, svelte, pug.",
+  "main": "src/index.js",
+  "scripts": {
+    "pug-svg-sprite": "node scripts/pug-svg-sprite.js",
+    "pug-settings": "node scripts/pug-settings.js",
+    "index.html": "npm run pug-svg-sprite && npm run pug-svg-settings && node node_modules/pug-cli -o docs src/pug_modules/index.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yababay/svelte-bootstrap-pug.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "svelte",
+    "pug",
+    "static",
+    "svg",
+    "html",
+    "template"
+  ],
+  "author": "Михаил Беляков",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yababay/svelte-bootstrap-pug/issues"
+  },
+  "homepage": "https://github.com/yababay/svelte-bootstrap-pug#readme",
+  "devDependencies": {
+    "jstransformer-markdown-it": "^2.1.0",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
