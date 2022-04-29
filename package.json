@@ -34,7 +34,7 @@
     "pug-cli": "^1.0.0-alpha6"
   },
   "dependencies": {
-    "@yababay67/hash-router": "^0.1.0",
+    "@yababay67/hash-router": "^0.1.1",
     "bootstrap-icons": "^1.8.1"
   }
 }

@@ -2,6 +2,7 @@
 /docs/index.html
 /src/pug_modules/svg.pug
 /src/pug_modules/settings.pug
+/src/pug_modules/script.pug
 
 # Logs
 logs

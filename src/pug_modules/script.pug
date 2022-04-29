@@ -48,8 +48,12 @@ script(type="module")
     |         return dynamicElement
     |     }
     | 
-    |     static showError(err){
-    |         console.log(err)
+    |     static showError(error){
+    |         MarkdownRouter.prepareDynamic(
+    |             `<div class="alert alert-danger text-center mt-3" role="alert">
+    |                 ${error}
+    |             </div>`
+    |         )
     |     }
     | }
     | 
