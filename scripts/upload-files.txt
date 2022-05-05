@@ -1,0 +1,5 @@
+docs/index.html
+docs/build/bundle.css
+docs/build/bundle.js
+docs/media/logo.svg
+
