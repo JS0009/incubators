@@ -1,4 +1,7 @@
 const fs = require('fs')
+const YAML = require('js-yaml')
+
+YAML.parse = YAML.load
 
 const iconsPath  = './node_modules/bootstrap-icons/icons/'
 const logoPath   = './docs/media/logo.svg'
@@ -9,7 +12,7 @@ const closing = '</svg>'
 
 let buff = opening
 
-const settings = JSON.parse(fs.readFileSync('./src/settings.json', 'utf-8'))
+const settings = YAML.parse(fs.readFileSync('./src/settings.yaml', 'utf-8'))
 const sprite = settings.svgSprite
 
 function getSvg(fn, path){
