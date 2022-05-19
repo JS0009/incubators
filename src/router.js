@@ -3,16 +3,17 @@ import Article from './components/Article'
 
 class ArticleRouter extends MarkdownRouter {
 
-    async getComponent(){
-        if(this.link === '/') return await super.getComponent()
+    async getComponent() {
+        if (this.link === '/') return await super.getComponent()
         super.showDynamic()
-        if(this.link.startsWith('content/')){
+        if (this.link.startsWith('content/')) {
+            const html = await this.fetchMarkdown(true)
             return <Article url={this.link} markdown={this.markdown} html={this.html} />
         }
         return false
     }
 
-    showError(err){
+    showError(err) {
         console.log(err)
     }
 }
