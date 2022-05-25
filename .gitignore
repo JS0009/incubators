@@ -2,6 +2,8 @@
 
 # temporary
 /.tmp
+/.venv
+/scripts/__pycache__/
 
 # dependencies
 /node_modules

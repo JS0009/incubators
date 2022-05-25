@@ -1,12 +1,14 @@
 import './Article.css'
 import { useState, useEffect } from 'react'
 
+const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
 
 export default function Article(props) {
 
     const [isEditing, setEditing] = useState(false)
     
     function toggleEditing() {
+        if(isLocal) return
         setEditing(!isEditing)
     }
 
@@ -17,7 +19,7 @@ export default function Article(props) {
 
     return (
         <>
-            <p className='text-end'>
+            <p style={{display:isLocal ? 'block' : 'none'}} className='text-end'>
                 <button onClick={toggleEditing} className="btn btn-primary">
                     {isEditing ? 'Сохранить' : 'Редактировать'}
                 </button>
