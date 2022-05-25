@@ -7,8 +7,8 @@ class ArticleRouter extends MarkdownRouter {
         if (this.link === '/') return await super.getComponent()
         super.showDynamic()
         if (this.link.startsWith('content/')) {
-            const html = await this.fetchMarkdown(true)
-            return <Article url={this.link} markdown={this.markdown} html={this.html} />
+            await this.fetchMarkdown(true)
+            return <Article link={this.link} markdown={this.markdown} html={this.html} />
         }
         return false
     }

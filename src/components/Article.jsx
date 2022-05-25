@@ -1,20 +1,20 @@
 import './Article.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 export default function Article(props) {
-    const [currentLink, setCurrentLink] = useState(null)
 
-    const [isEditing, setEditing] = useState(props.link === currentLink)
-    setCurrentLink(props.link)
+    const [isEditing, setEditing] = useState(false)
     
     function toggleEditing() {
         setEditing(!isEditing)
-        // viewer.current.style.display='none'
-        // editor.current.style.display = 'none'
-        // if(isEditing) editor.current.style.display='block'
-        // else viewer.current.style.display='block'
     }
+
+    useEffect(_=>{
+        setEditing(false)
+        console.log(props.link)
+    }, [props.link])
+
     return (
         <>
             <p className='text-end'>
