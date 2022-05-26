@@ -20,7 +20,7 @@
     "pug-svg-sprite": "node scripts/pug-svg-sprite.js",
     "pug-settings": "node scripts/pug-settings.js",
     "index.pug": " node node_modules/@yababay67/pug-modules/index.js",
-    "index.html": "npm run index.pug && npm run pug-svg-sprite && npm run pug-settings && node node_modules/pug-cli -o docs src/pug_modules/index.pug",
+    "index.html": "npm run index.pug && npm run pug-svg-sprite && npm run pug-settings && node node_modules/pug-cli -o public src/pug_modules/index.pug",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
