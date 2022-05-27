@@ -8,7 +8,7 @@ export default function Article(props) {
     const [isEditing, setEditing] = useState(false)
     
     function toggleEditing() {
-        if(isLocal) return
+        if(!isLocal) return
         setEditing(!isEditing)
     }
 
