@@ -23,7 +23,8 @@
     "index.html": "npm run index.pug && npm run pug-svg-sprite && npm run pug-settings && node node_modules/pug-cli -o public src/pug_modules/index.pug",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "react-scripts build && rm -rf docs && mv build docs && git add . && git commit -am deploy && git push origin react",
+    "deploy": "rm -rf docs build && react-scripts build && mv build docs && git add . && git commit -am deploy && git push origin react",
+    "serve": "serve -s docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
