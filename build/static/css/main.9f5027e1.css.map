@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.9f5027e1.css","mappings":"AAAA,SAII,aAAc,CAFd,YAAa,CACb,gBAAiB,CAFjB,UAIJ","sources":["components/Article.css"],"sourcesContent":["textarea{\n    width: 80ch;\n    height: 480px;\n    margin: 1rem auto;\n    display: block;\n}"],"names":[],"sourceRoot":""}
